@@ -4,6 +4,8 @@
 #include<Windows.h>
 #include<conio.h>
 
+#include<fstream>
+
 #include"myFunc.h"
 #include"strFunc.h"
 #include"MyStruct.h"
@@ -28,6 +30,16 @@ int main()
 	system("cls");
 	srand(time(0));
 
+
+	///// 16.09.2024 //////
+
+	//=============================================================================
+
+	ofstream fout;
+	fout.open("text.txt");
+	fout << "Hello C++" << endl;
+
+	fout.close();
 
 	///// 13.09.2024 //////
 
