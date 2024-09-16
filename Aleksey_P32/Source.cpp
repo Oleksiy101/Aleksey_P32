@@ -92,7 +92,7 @@ int main()
 	//	}
 	//}
 
-	ifstream in("MyStruct.h");
+	/*ifstream in("MyStruct.h");
 	char buff[80];
 	while (in.getline(buff, 80))
 	{
@@ -102,7 +102,32 @@ int main()
 
 	Student s;
 	s.setName("Ivan");
-	
+	s.addMark(10);
+	s.addMark(11);
+	s.addMark(12);
+	s.addMark(9);
+	s.info();
+
+	ofstream out("Student.txt");
+	out << s.name << endl;
+	for (size_t i = 0; i < s.size_mark; i++)
+	{
+		out << s.marks[i] << " ";
+	}
+	out << endl;*/
+
+	Student s;
+	ifstream in("Students.txt");
+	char buff[80];
+	in.getline(buff, 80);
+	s.setName(buff);
+	int c;
+	while (in >> c)
+	{
+		addValueArray(s.marks, s.size_mark, c);
+	}
+
+	s.info();
 
 	//printArray(b, size);
 

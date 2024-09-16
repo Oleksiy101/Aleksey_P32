@@ -129,7 +129,8 @@ struct Student
 	{
 		int m;
 		cin >> m;
-		addValueArray(marks, size_mark, m);
+		cin.ignore();
+		addMark(m);
 
 	}
 
@@ -218,11 +219,13 @@ struct Group
 		cout << "Enter number students: ";
 		int c;
 		cin >> c;
+		cin.ignore();
 		students[c - 1].menu();
 	}
 
 	void menu()
 	{
+		//load();
 		while (true)
 		{
 			system("cls");
