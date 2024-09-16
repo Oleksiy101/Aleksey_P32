@@ -35,11 +35,40 @@ int main()
 
 	//=============================================================================
 
-	ofstream fout;
-	fout.open("text.txt");
-	fout << "Hello C++" << endl;
+	//ofstream fout;
+	//fout.open("text.txt");
 
-	fout.close();
+	//int a[5] = { 1,2,3,4,5 };
+
+	////fout << "Hello C++" << endl;
+
+	//for (size_t i = 0; i < 5; i++)
+	//{
+	//	fout << a[i] << " ";
+	//}
+
+	//fout.close();
+
+	int* b = nullptr;
+	int size = 0;
+
+	ifstream fin("text.txt");
+	if (fin.is_open())
+	{
+		/*for (size_t i = 0; i < 5; i++)
+		{
+			fin >> b[i];
+		}*/
+
+		while (!fin.eof())
+		{
+			int c;
+			fin >> c;
+			addValueArray(b, size, c);
+		}
+	}
+	
+	printArray(b, size);
 
 	///// 13.09.2024 //////
 
