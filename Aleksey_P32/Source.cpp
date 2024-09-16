@@ -49,26 +49,62 @@ int main()
 
 	//fout.close();
 
-	int* b = nullptr;
-	int size = 0;
+	//int* b = nullptr;
+	//int size = 0;
 
-	ifstream fin("text.txt");
-	if (fin.is_open())
+	//ifstream fin("text.txt");
+	//if (fin.is_open())
+	//{
+	//	/*for (size_t i = 0; i < 5; i++)
+	//	{
+	//		fin >> b[i];
+	//	}*/
+
+	//	while (!fin.eof())
+	//	{
+	//		int c;
+	//		fin >> c;
+	//		addValueArray(b, size, c);
+	//	}
+	//}
+	//
+	//printArray(b, size);
+
+	//int* b = nullptr;
+	//int size = 0;
+
+	//ifstream fin("text.txt");
+	//ofstream out("text1.txt");
+	//if (fin.is_open())
+	//{
+	//	/*for (size_t i = 0; i < 5; i++)
+	//	{
+	//		fin >> b[i];
+	//	}*/
+	//	int c;
+	//	while (fin >> c)
+	//	{
+	//		if (c % 2 == 0)
+	//		{
+	//			out << c << " ";
+	//		}
+	//		//addValueArray(b, size, c);
+	//	}
+	//}
+
+	ifstream in("MyStruct.h");
+	char buff[80];
+	while (in.getline(buff, 80))
 	{
-		/*for (size_t i = 0; i < 5; i++)
-		{
-			fin >> b[i];
-		}*/
-
-		while (!fin.eof())
-		{
-			int c;
-			fin >> c;
-			addValueArray(b, size, c);
-		}
+		cout << buff << endl;
 	}
+
+
+	Student s;
+	s.setName("Ivan");
 	
-	printArray(b, size);
+
+	//printArray(b, size);
 
 	///// 13.09.2024 //////
 
